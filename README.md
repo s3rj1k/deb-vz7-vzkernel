@@ -9,4 +9,4 @@ How to build OpenVZ 7 debian vzkernel package
 - `cd vzkernel`
 - `make mrproper`
 - `cp config.OpenVZ .config`
-- `make deb-pkg`
+- `make -j$(nproc) deb-pkg`
