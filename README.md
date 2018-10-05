@@ -10,3 +10,7 @@ How to build OpenVZ 7 debian vzkernel package
 - `make mrproper`
 - `cp config.OpenVZ .config`
 - `make -j$(nproc) deb-pkg`
+
+## Fix libc6-dev dependency:
+In file `/var/lib/dpkg/status` find `Package: libc6-dev` and manually fix `Depends` filed,
+changing `linux-libc-dev` dependency to needed version
